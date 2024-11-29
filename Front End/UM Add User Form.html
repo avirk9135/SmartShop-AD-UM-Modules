@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add User</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 1200px;
+      border: 3px solid #302f2f;
+      padding: 10px 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      margin: 20px auto;
+    }
+
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #5c5454;
+      padding: 10px 20px;
+      border-radius: 8px;
+      color: #fff;
+    }
+
+    .top-bar .left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .top-bar .left .back-button {
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+
+    .top-bar .left .logo img {
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+    }
+
+    .top-bar .left .title {
+      background-color: #fff;
+      color: #000;
+      padding: 5px 15px;
+      border-radius: 15px;
+      border: 2px solid #000;
+      font-weight: bold;
+    }
+
+    .top-bar .middle {
+      display: flex;
+      gap: 20px;
+      padding: 7px 15px;
+      background-color: #fff;
+      border-radius: 15px;
+    }
+
+    .top-bar .middle img {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+
+    .top-bar .middle .icon-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+      padding: 0px;
+      border-radius: 50%;
+    }
+
+    .main-screen {
+      margin-top: 20px;
+      background-color: #dcdcdc;
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center;
+      height: auto;
+    }
+
+    .main-screen .title {
+      background-color: #fff;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      display: inline-block;
+      border: 2px solid #000;
+    }
+
+    .add-user-image {
+      margin: 20px 0;
+    }
+
+    .add-user-image img {
+      width: 150px;
+      height: 170px;
+    }
+
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    .form-container form {
+      width: 70%;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container form label {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-container form input,
+    .form-container form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .actions {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .action-button {
+      background-color: #fff;
+      padding: 10px 20px;
+      border-radius: 15px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      border: 2px solid #000;
+      transition: background-color 0.3s ease;
+    }
+
+    .action-button:hover {
+      background-color: #dcdcdc;
+    }
+
+    .action-button .icon {
+      margin-right: 5px;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="left">
+        <div class="back-button" onclick="window.location.href='UM Add Manage.html';">←</div>
+        <div class="logo">
+          <img src="smartshop logo.png" alt="Logo">
+        </div>
+        <div class="title">SmartShop</div>
+      </div>
+      <div class="middle">
+        <div class="icon-wrapper">
+          <img src="inventoryicon.png" alt="Suitcase">
+        </div>
+        <div class="icon-wrapper">
+          <img src="alertsicon.png" alt="Notification">
+        </div>
+        <div class="icon-wrapper">
+          <img src="usersicon.png" alt="Users" onclick="window.location.href='UM Add Manage.html';">
+        </div>
+        <div class="icon-wrapper">
+          <img src="analyticsicon.png" alt="Analytics">
+        </div>
+      </div>
+      <div class="right">
+        <input type="text" placeholder="Search">
+        <select>
+          <option value="options">Options</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Main Screen -->
+    <div class="main-screen">
+      <div class="title">User Management</div>
+      <div class="add-user-image">
+        <img src="addusericon.png" alt="Add User">
+      </div>
+      <div class="form-container">
+        <form>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter email" required>
+
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter password" required>
+
+          <label for="role">Role</label>
+          <select id="role" name="role" required>
+            <option value="admin">Admin</option>
+            <option value="manager">Manager</option>
+            <option value="staff">Staff</option>
+          </select>
+        </form>
+      </div>
+      <div class="actions">
+        <div class="action-button" onclick="window.location.href='UM Added Succesfully.html';">
+          <span class="icon">✔</span> Add User
+        </div>
+        <div class="action-button" onclick="window.location.href='UM Add Manage.html';">
+          <span class="icon">✖</span> Cancel
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
